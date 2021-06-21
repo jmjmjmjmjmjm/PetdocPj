@@ -1,9 +1,10 @@
-package com.gg.petdoc_project
+package com.gg.petdoc_project.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.gg.petdoc_project.R
 import kotlinx.android.synthetic.main.homeimgview.view.*
 
 

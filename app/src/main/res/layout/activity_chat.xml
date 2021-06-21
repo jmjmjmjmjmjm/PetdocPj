@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ChatActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/graysolid">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="❌"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="상담하기"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="상담 분류"
+        android:textColor="@color/black" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/graysolid">
+
+        <Button
+            android:id="@+id/chat_act"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/white"
+            android:text="행동"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.133"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chat_jehwal"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:text="재활"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chat_susul"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:text="수술"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toStartOf="@+id/chat_etc"
+            app:layout_constraintStart_toEndOf="@+id/chat_jehwal"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chat_etc"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:text="기타"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chat_nutrition"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:text="영양"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/chat_jub"
+            app:layout_constraintStart_toEndOf="@+id/chat_act"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chat_jub"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            android:text="예방접종"
+            android:textColor="@color/black"
+
+            app:layout_constraintBottom_toTopOf="@+id/chat_etc"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="상담 내용"
+        android:textColor="@color/black" />
+    <EditText
+        android:id="@+id/chat_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="start"
+        android:background="@drawable/graysolid"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:hint="\n상담 내용을 입력해주세요.상담 시 휴대폰 번호,실명 등\n 원치 않는 개인 정보가 노출되지 않도록 주의해 주세요."
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_height="300dp"/>
+    <ImageButton
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/pictherplus"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    <Button
+        android:id="@+id/chat_start"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF5A5C"
+        android:text="상담 신청"
+        />
+</LinearLayout>

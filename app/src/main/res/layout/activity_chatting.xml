@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Chatting">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/graysolid">
+
+        <Button
+            android:id="@+id/chatting_exit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="❌"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="나의 상담목록"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/graysolid">
+
+        <Button
+            android:id="@+id/chatting_act"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="@color/white"
+            android:text="행동"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.133"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chatting_jehwal"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:text="재활"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chatting_susul"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:text="수술"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintEnd_toStartOf="@+id/chatting_etc"
+            app:layout_constraintStart_toEndOf="@+id/chatting_jehwal"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chatting_etc"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/white"
+            android:text="기타"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chatting_nutrition"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/white"
+            android:text="영양"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/chatting_jub"
+            app:layout_constraintStart_toEndOf="@+id/chatting_act"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chatting_jub"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/white"
+            android:text="예방접종"
+            android:textColor="@color/black"
+
+            app:layout_constraintBottom_toTopOf="@+id/chatting_etc"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatting_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFDD3D" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/chatting_msg"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/graysolid"
+            android:hint="상담내용 입력."
+            android:textColor="@color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.144"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.523"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/chatting_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전송"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/chatting_msg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.623" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

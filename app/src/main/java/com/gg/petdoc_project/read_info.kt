@@ -6,16 +6,29 @@ import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_read_info.*
 
 class read_info() : AppCompatActivity() {
+    private var title:String?=null
+    private var name:String?=null
+    private var content:String?=null
+    private var date:String?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_read_info)
         
-        val name = intent.getStringExtra("name")
-        val title = intent.getStringExtra("title")
-        val content = intent.getStringExtra("content")
-        val date = intent.getStringExtra("date")
+        name = intent.getStringExtra("name")
+        title = intent.getStringExtra("title")
+        content = intent.getStringExtra("content")
+        date = intent.getStringExtra("date")
+        detail()
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        readinfo_close.setOnClickListener { finish() }
+    }
+
+    fun detail(){
         readinfo_title.text = title
         readinfo_date.text=date+" "+name
         readinfo_content.text=content
@@ -24,10 +37,5 @@ class read_info() : AppCompatActivity() {
             .load(url)
             .fitCenter()
             .into(readinfo_img)
-    }
-
-    override fun onStart() {
-        super.onStart()
-        readinfo_close.setOnClickListener { finish() }
     }
 }

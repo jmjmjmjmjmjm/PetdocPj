@@ -1,4 +1,4 @@
-package com.gg.petdoc_project
+package com.gg.petdoc_project.Dtos
 
 import android.widget.ImageView
 

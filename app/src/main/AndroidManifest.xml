@@ -11,14 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
+        <activity android:name=".Chatting"></activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDUMYz5dYTcseEo8NP8dwRzDmJ4dr_Cw6s" />
 
-        <activity android:name=".read_info"></activity>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".read_info" />
         <activity android:name=".BoardWrite" />
         <activity android:name=".InfoActivity" />
-        <activity android:name=".HomeActivity"/>
+        <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity2" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -1,6 +1,5 @@
-package com.gg.petdoc_project
+package com.gg.petdoc_project.adapters
 
-import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
@@ -10,7 +9,6 @@ open class PagerAdapter(
     fragmentManager: FragmentManager,
     val tabCount: Int
 ) : FragmentStatePagerAdapter(fragmentManager) {
-
     override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> {
@@ -25,7 +23,6 @@ open class PagerAdapter(
 
         }
     }
-
     override fun getCount(): Int {
         return tabCount
     }

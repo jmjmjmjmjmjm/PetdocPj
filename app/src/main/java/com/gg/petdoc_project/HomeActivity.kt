@@ -1,27 +1,20 @@
 package com.gg.petdoc_project
 
-import android.content.ContentValues
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.view.LayoutInflater
-import android.widget.Adapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.gg.petdoc_project.Frag.ReAdapter
+import com.gg.petdoc_project.Dtos.BoardDto
+import com.gg.petdoc_project.adapters.ReAdapter
+import com.gg.petdoc_project.adapters.Home_Adapter
+import com.gg.petdoc_project.adapters.PagerAdapter
 import com.google.android.material.tabs.TabLayout
-import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 
 import kotlinx.android.synthetic.main.activity_home.*
-import kotlinx.android.synthetic.main.fragment_shop_.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 
 class HomeActivity : AppCompatActivity() {
     lateinit var adapter: ReAdapter
@@ -31,7 +24,10 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         bottom()
-        val pagerAdapter = PagerAdapter(supportFragmentManager, 4)
+        val pagerAdapter = PagerAdapter(
+            supportFragmentManager,
+            4
+        )
         view_pager.adapter = pagerAdapter
 
     }
@@ -66,7 +62,10 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun read(context: Context?, listdata: ArrayList<BoardDto>, re:RecyclerView) {
-        adapter = ReAdapter(listdata, LayoutInflater.from(this))
+        adapter = ReAdapter(
+            listdata,
+            LayoutInflater.from(this)
+        )
         re.adapter = adapter
         re.layoutManager = LinearLayoutManager(this)
     }

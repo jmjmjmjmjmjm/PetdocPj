@@ -126,6 +126,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
+                android:id="@+id/chat"
                 android:layout_width="140dp"
                 android:layout_height="71dp"
                 android:background="@drawable/constulting_btn"

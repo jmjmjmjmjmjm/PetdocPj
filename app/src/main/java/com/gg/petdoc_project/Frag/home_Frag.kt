@@ -28,7 +28,6 @@ import kotlin.math.log
 
 
 class home_Frag() : Fragment() {
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -46,7 +45,11 @@ class home_Frag() : Fragment() {
                 startActivity(intent)
             }
         }
+        chat.setOnClickListener {
+            activity?.let {
+                val intent = Intent(context, ChatActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
-
-
 }
