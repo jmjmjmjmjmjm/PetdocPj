@@ -1,8 +1,13 @@
 # PetDoc포트폴리오
 
-#### 
+#### Activity, Adapter, Dto, Fragment로 나누고 작업하였습니다
+1. 이미지처리는 엑티비티에서 함수를 정의한후 프래그먼트에서 불러오는식으로 하였습니다
+2. OnclickLisnter가 많이 필요한부분엔 함수를 만들어놓고 깔끔하게하려고 노력하였습니다
+3. 데이터를 받아오는 부분에선 파싱작업을 split으로 하였습니다
 
+![Screenshot_1](https://user-images.githubusercontent.com/74043711/122727952-902fde80-d2b2-11eb-870b-104ec77f009c.png)
 
+***
 + HomeFragment
 
 ![GOMCAM 20210618_2008090219](https://user-images.githubusercontent.com/74043711/122726492-02072880-d2b1-11eb-9d59-91cd5c9c21f5.png)
